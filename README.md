@@ -2,6 +2,8 @@
 
 A chrome extension that let users quickly search and download books from ZLibrary
 
+![screenshot_1.png](./screenshots/screenshot_1.png)
+
 ## Usage
 
 Run the following commands to build our extension
