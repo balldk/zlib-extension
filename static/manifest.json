@@ -1,0 +1,26 @@
+{
+    "name": "ZLibrary Searcher",
+    "description": "Quickly search, preview and download books on ZLibrary",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "ZLibrary Searcher",
+        "default_icon": "favicon.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "downloads",
+        "storage",
+        "cookies"
+    ],
+    "host_permissions": [
+        "*://zlibrary-asia.se/*",
+        "*://singlelogin.se/*"
+    ]
+}
