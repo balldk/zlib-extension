@@ -2,11 +2,12 @@
 
 A chrome extension that let users quickly search and download books from ZLibrary
 
-## Uage
+## Usage
 
-run
+Run the following commands to build our extension
 
 ```
+npm install
 npm run build
 ```
 
