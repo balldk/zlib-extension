@@ -3,7 +3,7 @@
 	import { bookResponse, downloadBook, isLogin } from '../store'
 	import { ArrowDown, Link } from 'svelte-ionicons'
 	import type { Book } from '../types'
-	import { keyExpireDate, userProfile, zlibUserId, zlibUserKey } from '../store'
+	import { ZLIB_URL } from '../consts'
 
 	function bookDownloadDisplay(book: Book) {
 		let mb = (parseInt(book.filesize) / 1_000_000).toFixed(1)
@@ -29,8 +29,8 @@
 				<p>Pages: {book.pages}</p>
 			{/if}
 			<div class="control">
-				{#if typeof book.readOnlineUrl === 'string'}
-					<a target="_blank" href={book.readOnlineUrl}><Link />Read online</a>
+				{#if typeof book.preview === 'string' && book.preview !== ''}
+					<a target="_blank" href={`${ZLIB_URL}/${book.preview}`}><Link />Read online</a>
 				{/if}
 				<a
 					href="/"
