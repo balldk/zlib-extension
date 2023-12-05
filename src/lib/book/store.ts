@@ -4,7 +4,7 @@ import axios from 'axios'
 import { get } from 'svelte/store'
 import type { Book, BookResponse, DownloadData, UserProfile } from './types'
 import booksDataRequest from './booksDataRequest.json'
-import { ZLIB_URL } from './consts'
+import { ZLIB_LOGIN_URL, ZLIB_URL } from './consts'
 
 export let zlibUserId = writable('')
 export let zlibUserKey = writable('')
@@ -95,8 +95,8 @@ export async function downloadBook(book: Book) {
 }
 
 export function login() {
-	chrome.cookies.get({ url: ZLIB_URL, name: 'remix_userid' }, (cookie1) => {
-		chrome.cookies.get({ url: ZLIB_URL, name: 'remix_userkey' }, async (cookie2) => {
+	chrome.cookies.get({ url: ZLIB_LOGIN_URL, name: 'remix_userid' }, (cookie1) => {
+		chrome.cookies.get({ url: ZLIB_LOGIN_URL, name: 'remix_userkey' }, async (cookie2) => {
 			zlibUserId.set(cookie1?.value || '')
 			zlibUserKey.set(cookie2?.value || '')
 			keyExpireDate.set((cookie2?.expirationDate || 0) * 1000)
