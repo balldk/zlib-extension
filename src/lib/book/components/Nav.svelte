@@ -1,8 +1,6 @@
 <script>
-	import { goto } from '$app/navigation'
-	import { LogIn } from 'svelte-ionicons'
-	import { isLogin, keyExpireDate, userProfile, zlibUserId, zlibUserKey } from '../store'
-	import { ZLIB_LOGIN_URL, ZLIB_URL } from '$lib/book/consts'
+	import { isLogin, userProfile } from '../store'
+	import { ZLIB_LOGIN_URL, ZLIB_LOGOUT_URL } from '$lib/book/consts'
 
 	function handleLogin() {
 		let page = window.open(
@@ -28,7 +26,7 @@
 			>
 		</div>
 		<div>
-			<a href={`${ZLIB_LOGIN_URL}/logout.php`} target="_blank" class="logout-btn">Logout</a>
+			<a href={`${ZLIB_LOGOUT_URL}`} target="_blank" class="logout-btn">Logout</a>
 		</div>
 	{:else}
 		<div>

@@ -29,8 +29,8 @@
 				<p>Pages: {book.pages}</p>
 			{/if}
 			<div class="control">
-				{#if typeof book.preview === 'string' && book.preview !== ''}
-					<a target="_blank" href={`${ZLIB_URL}/${book.preview}`}><Link />Read online</a>
+				{#if typeof book.readOnlineUrl === 'string' && book.readOnlineUrl !== ''}
+					<a target="_blank" href={book.readOnlineUrl}><Link />Read online</a>
 				{/if}
 				<a
 					href="/"
