@@ -1,7 +1,7 @@
 {
     "name": "ZLibrary Searcher",
     "description": "Quickly search, preview and download books from ZLibrary",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "manifest_version": 3,
     "action": {
         "default_title": "ZLibrary Searcher",
@@ -22,6 +22,7 @@
     "host_permissions": [
         "*://zlibrary-asia.se/*",
         "*://singlelogin.se/*",
-        "*://singlelogin.re/*"
+        "*://singlelogin.re/*",
+        "*://z-library.sk/*"
     ]
 }
