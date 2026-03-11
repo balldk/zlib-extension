@@ -6,7 +6,7 @@ A chrome extension that let users quickly search and download books from ZLibrar
 
 ## Usage
 
-Run the following commands to build our extension
+You can either download the extension directly from Chrome Web Store: https://chromewebstore.google.com/detail/zlibrary-searcher/hacdelicpoafdkmkehadcdfkmkakiclf, or build the extension on your own by running
 
 ```
 npm install
